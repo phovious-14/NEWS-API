@@ -29,9 +29,9 @@
 
     <!-- Navigation bar with social media icons -->
     <div class="w3-bar w3-black w3-hide-small">
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
-        <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/krishn_panchal_14/" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+        <a href="https://twitter.com/krishnpanchal14" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/krishn-panchal-665388201/" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
         <a href="https://www.hindustantimes.com/" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i> <span style="font-size: 12.5px;">NEWS SOURCE FROM</span></a>
     </div>
 
@@ -47,13 +47,13 @@ and is wrapped around the whole page content, except for the footer in this exam
 
         <!-- Image header -->
         <header class="w3-display-container w3-wide" id="home">
-            <img class="w3-image" src="me.jpg" alt="Fashion Blog" width="1600" height="1060">
+            <img class="w3-image" src="me.jpg" alt="" width="1600" height="1060">
             <div class="w3-display-left w3-padding-large">
                 <h1 class="w3-text-white">Krishn's</h1>
                 <h1 class="w3-jumbo w3-text-white"><b>NEWS API</b></h1>
             </div>
-        </header>
-
+        </header><br>
+        <h1 style="text-align: center;">How to use?</h1><br>
         <!-- Grid -->
         <div class="w3-row w3-padding w3-border">
 
@@ -63,36 +63,33 @@ and is wrapped around the whole page content, except for the footer in this exam
                 <!-- Blog entry -->
                 <div class="w3-container w3-white w3-margin w3-padding-large">
                     <div class="w3-center">
-                        <h3>TITLE HEADING</h3>
-                        <h5>Title description, <span class="w3-opacity">May 2, 2016</span></h5>
+                        <h3>ALL NEWS</h3>
+                        <a class="w3-opacity" href="https://news-api-public.herokuapp.com/news">https://news-api-public.herokuapp.com/news</a>
                     </div>
 
                     <div class="w3-justify">
-                        <img src="/w3images/girl_hat.jpg" alt="Girl Hat" style="width:100%" class="w3-padding-16">
-                        <p><strong>More Hats!</strong> I am crazy about hats these days. Some text about this blog
-                            entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus
-                            nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor
-                            magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam
-                            corper. Praesent tincidunt sedtellus ut rutrum. Sed vitae justo condimentum, porta lectus
-                            vitae, ultricies congue gravida diam non fringilla.</p>
-                        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco.</p>
-                        <p class="w3-left"><button class="w3-button w3-white w3-border"
-                                onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
-                        <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo1')"
-                                id="myBtn"><b>Replies  </b> <span class="w3-tag w3-white">1</span></button></p>
-                        <p class="w3-clear"></p>
-                        <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
-                            <hr>
-                            <div class="w3-col l2 m3">
-                                <img src="/w3images/avatar_smoke.jpg" style="width:90px;">
-                            </div>
-                            <div class="w3-col l10 m9">
-                                <h4>George <span class="w3-opacity w3-medium">May 3, 2015, 6:32 PM</span></h4>
-                                <p>Great blog post! Following</p>
-                            </div>
-                        </div>
+                        <img src="news.png" alt="" style="width:100%" class="w3-padding-16">
+                        <p>By using <strong>Fetch API</strong>, To get all news (here all category news like sports, india news, world news etc.) from api, You need to add endpoint '/news' to 'https://news-api-public.herokuapp.com'</p>
+                        <p><strong>NOTE ! THIS API ONLY WORKS ON GET REQUEST</strong> including all endpoints</p><br>
+                        <img src="news response.png" alt="" style="width:100%" class="w3-padding-16">
+                        <p>After getting response, You can see all news in json format. You can use it by looping methos to get particular data</p>
+                        <p>It is Araay of objects, and each object contains one news data, In one each object there are 4 properties 
+                            <ul>
+                                <li><strong>category</strong> - type of news</li>
+                                <li><strong>title</strong> - title of news</li>
+                                <li><strong>image</strong> - image of news</li>
+                                <li><strong>fullStory</strong> - get the full story of news<br>
+
+                                    <p>To get full story of particular news, take data from fullStory property throught looping, than fetch api again by appending particular fullStory value which is in encoded form (Why encoding? : to get response faster by doing encoding data, and fetch appended url again)
+                                        <br><br><strong>Checkout below screenshot for getting full story (story of yellow marked data of above screenshot)</strong><br>
+                                        <img src="news full story.png" alt="" style="width:100%" class="w3-padding-16">
+                                        <br>
+                                        <p>After getting response of full story</p>
+                                        <img src="news full story response.png" alt="" style="width:100%" class="w3-padding-16">
+                                    </p>
+                                </li>
+                            </ul>
+                        </p>
                     </div>
                 </div>
                 <hr>
@@ -206,68 +203,7 @@ and is wrapped around the whole page content, except for the footer in this exam
             </div>
 
             <!-- About/Information menu -->
-            <div class="w3-col l4">
-                <!-- About Card -->
-                <div class="w3-white w3-margin">
-                    <img src="/w3images/avatar_girl2.jpg" alt="Jane" style="width:100%" class="w3-grayscale">
-                    <div class="w3-container w3-black">
-                        <h4>My Name</h4>
-                        <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a
-                            interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
-                    </div>
-                </div>
-                <hr>
-
-                <!-- Posts -->
-                <div class="w3-white w3-margin">
-                    <div class="w3-container w3-padding w3-black">
-                        <h4>Popular Posts</h4>
-                    </div>
-                    <ul class="w3-ul w3-hoverable w3-white">
-                        <li class="w3-padding-16">
-                            <img src="/w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right"
-                                style="width:50px">
-                            <span class="w3-large">Denim</span>
-                            <br>
-                            <span>Sed mattis nunc</span>
-                        </li>
-                        <li class="w3-padding-16">
-                            <img src="/w3images/bandmember.jpg" alt="Image" class="w3-left w3-margin-right"
-                                style="width:50px">
-                            <span class="w3-large">Sweaters</span>
-                            <br>
-                            <span>Praes tinci sed</span>
-                        </li>
-                        <li class="w3-padding-16">
-                            <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right"
-                                style="width:50px">
-                            <span class="w3-large">Workshop</span>
-                            <br>
-                            <span>Ultricies congue</span>
-                        </li>
-                        <li class="w3-padding-16">
-                            <img src="/w3images/avatar_smoke.jpg" alt="Image" class="w3-left w3-margin-right w3-sepia"
-                                style="width:50px">
-                            <span class="w3-large">Trends</span>
-                            <br>
-                            <span>Lorem ipsum dipsum</span>
-                        </li>
-                    </ul>
-                </div>
-                <hr>
-
-                <!-- Advertising -->
-                <div class="w3-white w3-margin">
-                    <div class="w3-container w3-padding w3-black">
-                        <h4>Advertise</h4>
-                    </div>
-                    <div class="w3-container w3-white">
-                        <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
-                            <span class="w3-display-middle">Your AD Here</span>
-                        </div>
-                    </div>
-                </div>
-                <hr>
+            <div class="w3-col l4" style="position: sticky; top: 10px;">
 
                 <!-- Tags -->
                 <div class="w3-white w3-margin">
@@ -295,55 +231,17 @@ and is wrapped around the whole page content, except for the footer in this exam
                 </div>
                 <hr>
 
-                <!-- Inspiration -->
-                <div class="w3-white w3-margin">
-                    <div class="w3-container w3-padding w3-black">
-                        <h4>Inspiration</h4>
-                    </div>
-                    <div class="w3-row-padding w3-white">
-                        <div class="w3-col s6">
-                            <p><img src="/w3images/jeans.jpg" alt="Jeans" style="width:100%"></p>
-                            <p><img src="/w3images/team1.jpg" alt="Jeans" style="width:100%"></p>
-                        </div>
-                        <div class="w3-col s6">
-                            <p><img src="/w3images/avatar_hat.jpg" alt="Men in Hats" style="width:100%"
-                                    class="w3-grayscale"></p>
-                            <p><img src="/w3images/team4.jpg" alt="Jeans" style="width:100%"></p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-
                 <div class="w3-white w3-margin">
                     <div class="w3-container w3-padding w3-black">
                         <h4>Follow Me</h4>
                     </div>
                     <div class="w3-container w3-xlarge w3-padding">
-                        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-                        <i class="fa fa-instagram w3-hover-opacity"></i>
-                        <i class="fa fa-snapchat w3-hover-opacity"></i>
-                        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-                        <i class="fa fa-twitter w3-hover-opacity"></i>
-                        <i class="fa fa-linkedin w3-hover-opacity"></i>
+                        <a href="https://www.instagram.com/krishn_panchal_14/" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
+        <a href="https://twitter.com/krishnpanchal14" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/krishn-panchal-665388201/" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
                     </div>
                 </div>
                 <hr>
-
-                <!-- Subscribe -->
-                <div class="w3-white w3-margin">
-                    <div class="w3-container w3-padding w3-black">
-                        <h4>Subscribe</h4>
-                    </div>
-                    <div class="w3-container w3-white">
-                        <p>Enter your e-mail below and get notified on the latest blog posts.</p>
-                        <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%">
-                        </p>
-                        <p><button type="button" onclick="document.getElementById('subscribe').style.display='block'"
-                                class="w3-button w3-block w3-red">Subscribe</button></p>
-                    </div>
-                </div>
-
-                <!-- END About/Intro Menu -->
             </div>
 
             <!-- END GRID -->
