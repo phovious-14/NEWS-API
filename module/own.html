@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
         h1,
         h2,
         h3,
@@ -22,6 +27,7 @@
         body {
             font-family: "Open Sans"
         }
+
     </style>
 </head>
 
@@ -61,17 +67,17 @@ and is wrapped around the whole page content, except for the footer in this exam
             <div class="w3-col l8 s12">
 
                 <!-- Blog entry -->
-                <div class="w3-container w3-white w3-margin w3-padding-large">
+                <div class="w3-container w3-white w3-margin w3-padding-large" id="allnews">
                     <div class="w3-center">
                         <h3>ALL NEWS</h3>
-                        <a class="w3-opacity" href="https://news-api-public.herokuapp.com/news">https://news-api-public.herokuapp.com/news</a>
+                        <a class="w3-opacity" style="color: blue;" href="https://news-api-public.herokuapp.com/news">https://news-api-public.herokuapp.com/news</a>
                     </div>
 
                     <div class="w3-justify">
                         <img src="news.png" alt="" style="width:100%" class="w3-padding-16">
                         <p>By using <strong>Fetch API</strong>, To get all news (here all category news like sports, india news, world news etc.) from api, You need to add endpoint '/news' to 'https://news-api-public.herokuapp.com'</p>
                         <p><strong>NOTE ! THIS API ONLY WORKS ON GET REQUEST</strong> including all endpoints</p><br>
-                        <img src="news response.png" alt="" style="width:100%" class="w3-padding-16">
+                        <img src="india news response.png" alt="" style="width:100%" class="w3-padding-16">
                         <p>After getting response, You can see all news in json format. You can use it by looping methos to get particular data</p>
                         <p>It is Araay of objects, and each object contains one news data, In one each object there are 4 properties 
                             <ul>
@@ -94,110 +100,130 @@ and is wrapped around the whole page content, except for the footer in this exam
                 </div>
                 <hr>
 
-                <!-- Blog entry -->
-                <div class="w3-container w3-white w3-margin w3-padding-large">
-                    <div class="w3-center">
-                        <h3>TITLE HEADING</h3>
-                        <h5>Title description, <span class="w3-opacity">April 23, 2016</span></h5>
-                    </div>
-
-                    <div class="w3-justify">
-                        <img src="/w3images/man_hat.jpg" alt="Men in Hats" style="width:100%" class="w3-padding-16">
-                        <p><strong>Hats!</strong> The trend this summer is hats for men!</p>
-                        <p>Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl
-                            vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor
-                            magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies
-                            mi non congue ullam corper. Praesent tincidunt sedtellus ut rutrum. Sed vitae justo
-                            condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-                        <p class="w3-left"><button class="w3-button w3-white w3-border"
-                                onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
-                        <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo2')"><b>Replies
-                                     </b> <span class="w3-tag w3-white">2</span></button></p>
-                        <p class="w3-clear"></p>
-
-                        <!-- Example of comment field -->
-                        <div id="demo2" style="display:none">
-                            <div class="w3-row">
-                                <hr>
-                                <div class="w3-col l2 m3">
-                                    <img src="/w3images/girl_train.jpg" style="width:90px;">
-                                </div>
-                                <div class="w3-col l10 m9">
-                                    <h4>Amber <span class="w3-opacity w3-medium">April 26, 2015, 10:52 PM</span></h4>
-                                    <p>Love your blog page! Simply the best! Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                                        aliqua.</p><br>
-                                </div>
-                            </div>
-                            <div class="w3-row w3-margin-bottom">
-                                <div class="w3-col l2 m3">
-                                    <img src="/w3images/girl.jpg" style="width:90px;">
-                                </div>
-                                <div class="w3-col l10 m9">
-                                    <h4>Angie <span class="w3-opacity w3-medium">April 23, 2015, 9:12 PM</span></h4>
-                                    <p>Love hats!!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="w3-container w3-white w3-margin w3-padding-large" style="border: 3px solid lightgreen; border-radius: 10px;">
+                    <h4><strong>Now thw next end points will be categorized (e.g. into india-news, world-news, science, sports, trending etc...) And each end points will divided into chunks for getting fast response</strong></h4>
                 </div>
 
                 <!-- Blog entry -->
-                <div class="w3-container w3-white w3-margin w3-padding-large">
+                <div class="w3-container w3-white w3-margin w3-padding-large" id="indianews">
                     <div class="w3-center">
-                        <h3>TITLE HEADING</h3>
-                        <h5>Title description, <span class="w3-opacity">April 7, 2016</span></h5>
+                        <h3>INDIA NEWS</h3>
+                        <a class="w3-opacity" style="color: blue;" href="https://news-api-public.herokuapp.com/news/india-news/1">https://news-api-public.herokuapp.com/news/india-news/1</a>
                     </div>
 
                     <div class="w3-justify">
-                        <img src="/w3images/runway.jpg" alt="Runway" style="width:100%" class="w3-padding-16">
-                        <p><strong>Dont miss!</strong> The runway in New York City this weekend is gonna be legendary!
-                        </p>
-                        <p>Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl
-                            vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor
-                            magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies
-                            mi non congue ullam corper. Praesent tincidunt sedtellus ut rutrum. Sed vitae justo
-                            condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-                        <p class="w3-left"><button class="w3-button w3-white w3-border"
-                                onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
-                        <p class="w3-right"><button class="w3-button w3-black" onclick="myFunction('demo3')"><b>Replies
-                                     </b> <span class="w3-tag w3-white">3</span></button></p>
-                        <p class="w3-clear"></p>
+                        <img src="india news.png" alt="" style="width:100%" class="w3-padding-16">
+                        <p><strong>To get india news, use end point : /news/india-news/1</strong></p>
+                        <p>In this,  <br>/news/india-news defines news of india only<br>/1 defines chunk of india-news response</p>
+                        <img src="india news response.png" alt="" style="width:100%" class="w3-padding-16">
+                        <p>After getting response of same category, You can see all news in json format. You can use it by looping methos to get particular data</p>
+                        <p>It is also Araay of objects, and each object contains one news data, In one each object there are 4 properties as well.</p>
+                    </div><br>
+                    <p>You can get more data by using /2 , /3 , /4 , ... like pagination, checkout below screenshots</p>
+                    <img src="india news pages.png" alt="" style="width:100%" class="w3-padding-16"><br>
+                    <p>Response with india-news category of /4 end point, same as above /1 end point but data will be different</p>
+                    <img src="india news pages response.png" alt="" style="width:100%" class="w3-padding-16">
+                    <p>
+                        <ul>
+                            <li><strong>fullStory</strong> - get the full story of news<br>
 
-                        <!-- Example of comment field -->
-                        <div id="demo3" style="display:none">
-                            <hr>
-                            <div class="w3-row w3-margin-bottom">
-                                <div class="w3-col l2 m3">
-                                    <img src="/w3images/girl_mountain.jpg" style="width:90px;">
-                                </div>
-                                <div class="w3-col l10 m9">
-                                    <h4>Jane <span class="w3-opacity w3-medium">April 10, 2015, 7:22 PM</span></h4>
-                                    <p>That was a great runway show! Thanks for everything.</p>
-                                </div>
-                            </div>
-                            <div class="w3-row w3-margin-bottom">
-                                <div class="w3-col l2 m3">
-                                    <img src="/w3images/boy.jpg" style="width:90px;">
-                                </div>
-                                <div class="w3-col l10 m9">
-                                    <h4>John <span class="w3-opacity w3-medium">April 8, 2015, 10:32 PM</span></h4>
-                                    <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet,
-                                        consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                                </div>
-                            </div>
-                            <div class="w3-row w3-margin-bottom">
-                                <div class="w3-col l2 m3">
-                                    <img src="/w3images/girl_hood.jpg" style="width:90px;">
-                                </div>
-                                <div class="w3-col l10 m9">
-                                    <h4>Anja <span class="w3-opacity w3-medium">April 7, 2015, 9:12 PM</span></h4>
-                                    <p>Cant wait for the runway to start!</p>
-                                </div>
-                            </div>
-                        </div>
+                                <p>To get full story of particular news, take data from fullStory property throught looping, than fetch api again by appending particular fullStory value which is in encoded form (Why encoding? : to get response faster by doing encoding data, and fetch appended url again)
+                                    <br><br><strong>Checkout below screenshot for getting full story (story of yellow marked data of above screenshot)</strong><br>
+                                    <img src="india news fullstory.png" alt="" style="width:100%" class="w3-padding-16">
+                                    <br>
+                                    <p>After getting response of full story</p>
+                                    <img src="india news fullstory response.png" alt="" style="width:100%" class="w3-padding-16">
+                                </p>
+                            </li>
+                        </ul>
+                    </p>
+                        
+                </div>
+                <hr>
+
+                <div class="w3-container w3-white w3-margin w3-padding-large" id="worldnews">
+                    <div class="w3-center">
+                        <h3>WORLD NEWS</h3>
+                        <a class="w3-opacity" style="color: blue;" href="https://news-api-public.herokuapp.com/news/world-news/1">https://news-api-public.herokuapp.com/news/world-news/1</a>
+                        <br>
+                        <p>To get world news data, follow the proccess of india news but use above link</p>
                     </div>
                 </div>
+                <hr>
+                
+                <div class="w3-container w3-white w3-margin w3-padding-large" style="border: 3px solid rgb(225, 122, 122); border-radius: 10px;">
+                    <h4><strong>Now thw next end points will be category can be different, actually its sub part of its end point, so i have appended it. (e.g. In sports you will get different categories like cricket, football, tennis etc... )  </strong></h4>
+                </div>
+
+                <div class="w3-container w3-white w3-margin w3-padding-large" id="sports">
+                    <div class="w3-center">
+                        <h3>SPORTS</h3>
+                        <a class="w3-opacity" style="color: blue;" href="https://news-api-public.herokuapp.com/news/sports/1">https://news-api-public.herokuapp.com/news/sports/1</a>
+                        <br>
+                        <p>To get sports news data, follow the proccess of india news but use above link</p>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="w3-container w3-white w3-margin w3-padding-large" id="education">
+                    <div class="w3-center">
+                        <h3>EDUCATION</h3>
+                        <a class="w3-opacity" style="color: blue;" href="https://news-api-public.herokuapp.com/education/sports/1">https://news-api-public.herokuapp.com/news/education/1</a>
+                        <br>
+                        <p>To get education news data, follow the proccess of india news but use above link</p>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="w3-container w3-white w3-margin w3-padding-large" id="entertainment">
+                    <div class="w3-center">
+                        <h3>ENTERTAINMENT</h3>
+                        <a class="w3-opacity" style="color: blue;" href="https://news-api-public.herokuapp.com/news/entertainment/1">https://news-api-public.herokuapp.com/entertainment/1</a>
+                        <br>
+                        <p>To get entertainment news data, follow the proccess of india news but use above link</p>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="w3-container w3-white w3-margin w3-padding-large" id="trending"> 
+                    <div class="w3-center">
+                        <h3>TRENDING</h3>
+                        <a class="w3-opacity" style="color: blue;" href="https://news-api-public.herokuapp.com/news/trending/1">https://news-api-public.herokuapp.com/trending/1</a>
+                        <br>
+                        <p>To get entertainment news data, follow the proccess of india news but use above link</p>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="w3-container w3-white w3-margin w3-padding-large" id="lifestyle">
+                    <div class="w3-center">
+                        <h3>LIFE STYLE</h3>
+                        <a class="w3-opacity" style="color: blue;" href="https://news-api-public.herokuapp.com/news/lifestyle/1">https://news-api-public.herokuapp.com/lifestyle/1</a>
+                        <br>
+                        <p>To get life style news data, follow the proccess of india news but use above link</p>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="w3-container w3-white w3-margin w3-padding-large" id="business">
+                    <div class="w3-center">
+                        <h3>BUSINESS</h3>
+                        <a class="w3-opacity" style="color: blue;" href="https://news-api-public.herokuapp.com/news/business/1">https://news-api-public.herokuapp.com/business/1</a>
+                        <br>
+                        <p>To get business news data, follow the proccess of india news but use above link</p>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="w3-container w3-white w3-margin w3-padding-large" id="science">
+                    <div class="w3-center">
+                        <h3>SCIENCE</h3>
+                        <a class="w3-opacity" style="color: blue;" href="https://news-api-public.herokuapp.com/news/science/1">https://news-api-public.herokuapp.com/science/1</a>
+                        <br>
+                        <p>To get science news data, follow the proccess of india news but use above link</p>
+                    </div>
+                </div>
+                <hr>
 
                 <!-- END BLOG ENTRIES -->
             </div>
@@ -212,20 +238,16 @@ and is wrapped around the whole page content, except for the footer in this exam
                     </div>
                     <div class="w3-container w3-white">
                         <p>
-                            <span class="w3-tag w3-black w3-margin-bottom">Fashion</span> <span
-                                class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span> <span
-                                class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
-                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Hats</span> <span
-                                class="w3-tag w3-light-grey w3-small w3-margin-bottom">Norway</span> <span
-                                class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sweaters</span>
-                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span
-                                class="w3-tag w3-light-grey w3-small w3-margin-bottom">Deals</span> <span
-                                class="w3-tag w3-light-grey w3-small w3-margin-bottom">Accessories</span>
-                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span
-                                class="w3-tag w3-light-grey w3-small w3-margin-bottom">Clothing</span> <span
-                                class="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span>
-                            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Jeans</span> <span
-                                class="w3-tag w3-light-grey w3-small w3-margin-bottom">Trends</span>
+                            <a href="#allnews"><span class="w3-tag w3-light-grey w3-small w3-margin-bottom">All news</span></a>
+                            <a href="#indianews"><span class="w3-tag w3-light-grey w3-small w3-margin-bottom">India news</span></a>
+                            <a href="#worldnews"><span class="w3-tag w3-light-grey w3-small w3-margin-bottom">world news</span></a>
+                            <a href="#sports"><span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span></a>
+                            <a href="#education"><span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Education</span></a>
+                            <a href="#entertainment"><span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Entertainment</span></a>
+                            <a href="#trending"><span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Trending</span></a>
+                            <a href="#lifestyle"><span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Life style</span></a>
+                            <a href="#business"><span class="w3-tag w3-light-grey w3-small w3-margin-bottom">business</span></a>
+                            <a href="#science"><span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Science</span></a>
                         </p>
                     </div>
                 </div>
@@ -250,26 +272,12 @@ and is wrapped around the whole page content, except for the footer in this exam
         <!-- END w3-content -->
     </div>
 
-    <!-- Subscribe Modal -->
-    <div id="subscribe" class="w3-modal w3-animate-opacity">
-        <div class="w3-modal-content" style="padding:32px">
-            <div class="w3-container w3-white">
-                <i onclick="document.getElementById('subscribe').style.display='none'"
-                    class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
-                <h2 class="w3-wide">SUBSCRIBE</h2>
-                <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
-                <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
-                <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom"
-                    onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
-            </div>
-        </div>
-    </div>
 
     <!-- Footer -->
     <footer class="w3-container w3-dark-grey" style="padding:32px">
         <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i
                 class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        <p>© All rights reserved</p>
     </footer>
 
     <script>
